@@ -7,6 +7,18 @@ body{
 
 }
 
+.navbar{
+    text-align: justify;
+    background-color: #2e9696;
+    margin: 0;
+    width: 100%;
+    padding: 4px;
+    padding-left: 10px;
+    position: fixed;
+    z-index: 1;
+    
+}
+
 
 h1{
    font-size: 4rem;
@@ -33,15 +45,16 @@ p{
 }
 
 .top-container{
-    
+    padding: relative;
     margin: 0px;
     padding: 0px;
     padding-left: 10px;
     padding-right: 10px;
-    padding-top: 200px;
+    padding-top: 220px;
     width: 100%;
     background-color: #c8fbf2;
-    position: relative;
+    display: inline-block;
+    
 }
 .middle-container{
     margin: 0px;
@@ -57,7 +70,8 @@ p{
 }
 
 .profilepic{
-    width: 200px;
+    max-width: 200px;
+    width: 40%;
     margin: 0 auto 0 auto;
     padding-bottom: 10px;
 }
@@ -81,7 +95,8 @@ p{
     
 }
 .development{
-    width: 200px; 
+    width: 50%; 
+    max-width: 200px;
     float: left;
     margin-right: 20px;
    
@@ -103,7 +118,8 @@ p{
     color: black;
 }
 .reverse-engineering{
-    width: 200px;
+    max-width: 200px;
+    width: 50%;
     float: right;
     margin-left: 20px;
     
@@ -158,29 +174,30 @@ span{
 .cloud1{
     position: absolute;
     left: 20%;
-    top: 30%;
+    top: 40%;
+    
     
 }
 .cloud2{
     position: absolute;
     right: 20%;
-    top: 10%;
+    top: 20%;
 }
 
 .cloud3{
     position: absolute;
     left: 40%;
-    top: 60%;
+    top: 70%;
     
 }
 .cloud4{
     position: absolute;
-    right: 35%;
-    top: 55%;
+    right: 20%;
+    top: 65%;
 }
 
 .mountain{
-    position: relative  ;
+   
     padding-top: 150px;
     max-width: 100%;
     margin-bottom: 0px;
@@ -199,3 +216,14 @@ span{
 .footer-paragraph{
     font-size: 0.8rem;
 }
+
+
+
+.nav-description{
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 16px;
+    padding: 0;
+    color: white;
+}
+
