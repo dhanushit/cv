@@ -182,7 +182,7 @@ span{
 .mountain{
     position: relative  ;
     padding-top: 150px;
-    width: 600px;
+    max-width: 100%;
     margin-bottom: 0px;
 }
 
