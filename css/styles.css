@@ -9,26 +9,26 @@ body{
 
 
 h1{
-   font-size: 4vw;
+   font-size: 4rem;
    margin-bottom: 0px;
    /* margin: 0 auto 0 auto; */
    font-family: cursive;
    color: #2e9696;
 }
 h2{
-    font-size: 2vw;
+    font-size: 2rem;
      /* margin: 0 auto 0 auto; */
     color: #2e9696;
  }
 
 h3{
-    font-size: 1.5vw;
+    font-size: 1.5rem;
     /* margin: 0 auto 0 auto; */
     color: #2e9696;
  }
 
 p{
-    font-size: 1.2vw;
+    font-size: 1.2rem;
     color: #2e9696;
 }
 
@@ -94,7 +94,7 @@ p{
 }
 
 .design-develop{
-    font-size: 1.5vw;
+    font-size: 1.5rem;
     text-align: left;
     color: #2e9696;
 }
@@ -109,7 +109,7 @@ p{
     
 }
 .reverse-engineer{
-    font-size: 1.5vw;
+    font-size: 1.5rem;
     text-align: right;
     color: #2e9696;
 }
@@ -128,7 +128,7 @@ p{
     text-decoration: solid;
     color: white;
     padding: 10px;
-    font-size: 1.2vw;
+    font-size: 1.2rem;
     border: none;
     border-radius: 10px;
 }
@@ -197,5 +197,5 @@ span{
 
 
 .footer-paragraph{
-    font-size: 0.8vw;
+    font-size: 0.8rem;
 }
