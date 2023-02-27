@@ -292,7 +292,7 @@ i:hover{
     #title .row h1 {
         font-size: 3rem;
         font-weight: bolder;
-        /* margin: 0 1rem 0 4rem; */
+        margin: 0 1rem 0 4rem;
         color: whitesmoke;
     }
 
