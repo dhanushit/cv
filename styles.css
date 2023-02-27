@@ -284,22 +284,27 @@ i:hover{
 
     #coder-img{
         position: relative;
-        margin: 10vh auto;
+        margin: 10vh auto 5vh auto;
         width: 100%;
         max-width: 100%;
     }
 
     #title .row h1 {
-        font-size: 3rem;
+        font-size: 2rem;
         font-weight: bolder;
-        margin: 0 1rem 0 4rem;
+        margin: 0 1rem 0 1rem;
         color: whitesmoke;
     }
 
-    #passion{
     
+   #title .row h2{
+    color: whitesmoke;
+    font-size: 1.5rem;
+    margin: 1rem 1rem 0 1rem;
+   }
+
+    #passion{
         text-align: center;
-        
     }
 
     #passion h1{
