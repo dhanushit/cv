@@ -32,7 +32,7 @@ body {
     min-width: 100%;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-radius: 20px;
+    border-radius: 15px;
     margin: 2px;
     z-index: 1;
 
