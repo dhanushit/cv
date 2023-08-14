@@ -46,3 +46,12 @@ function slide() {
   close.classList.toggle("menuinvisible");
   bottomnavcontent.classList.toggle("bottom-nav-visible");
 }
+
+window.addEventListener('scroll',()=>{
+    var scrollTop = document.querySelector('.arrow');
+    if(window.scrollY > 800){
+      scrollTop.style.opacity = '1';
+    }else{
+      scrollTop.style.opacity = '0';
+    }
+})

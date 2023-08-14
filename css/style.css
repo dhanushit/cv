@@ -261,6 +261,42 @@ body {
   transform: translateX(0px);
 }
 
+.arrow{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: solid var(--border-color) 2px;
+  background-color: var(--nav-bg-color);
+  backdrop-filter: blur(1px);
+  position: fixed;
+  bottom: 5rem;
+  right: 5rem;
+  opacity: 0;
+  transition: all 0.5s;
+  z-index: 5;
+}
+
+.arrow ion-icon{
+  font-size: 1rem;
+}
+
+
+
+@media (max-width: 1200px) {
+  .arrow{
+    right: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .arrow{
+    right: 2rem;
+    bottom: 3rem;
+  }
+}
 /* header end  */
 
 /* intro section  */
@@ -576,7 +612,6 @@ body {
   );
   padding: 1rem;
   overflow: hidden;
-  /* background-color: red; */
 }
 
 .skill-right-card {
@@ -592,7 +627,6 @@ body {
   );
   padding: 1rem;
   overflow: hidden;
-  /* background-color: red; */
 }
 
 .skill-card-text {
