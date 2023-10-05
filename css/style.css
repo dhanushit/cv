@@ -14,7 +14,7 @@
   color: white;
 }
 
-html::-webkit-scrollbar {
+::-webkit-scrollbar {
   display: none;
 }
 
@@ -424,15 +424,15 @@ body {
   width: 100%;
   display: flex;
   justify-content: end;
-  margin-top: 5rem;
+  margin-top: 3rem;
   /* margin-bottom: 5rem; */
 }
 
 #footer::before {
   content: "";
   position: absolute;
-  width: 20rem;
-  height: 20rem;
+  width: 17rem;
+  height: 17rem;
   right: -8rem;
   bottom: 0;
   background-image: url(../assets/hand-right.webp);
