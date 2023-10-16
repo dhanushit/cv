@@ -1,12 +1,5 @@
 'use strict'
 
-let loader = document.querySelector(".loader");
-
-window.addEventListener("load", vanish);
-
-function vanish() {
-  loader.classList.add("disapper");
-}
 
 var typed = new Typed(".text-animation", {
   strings: ["Web Developer", "App Developer"],
@@ -15,6 +8,17 @@ var typed = new Typed(".text-animation", {
   backDelay: 1000,
   loop: true,
 });
+
+
+let loader = document.querySelector(".loader");
+
+window.addEventListener("load", vanish);
+
+function vanish() {
+  loader.classList.add("disapper");
+}
+
+
 
 
 
