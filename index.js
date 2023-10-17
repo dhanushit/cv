@@ -12,9 +12,9 @@ let loader = document.querySelector(".loader");
 // }
 
 window.addEventListener("load", function() {
-  setTimeout(function() {
+  // setTimeout(function() {
     loader.classList.add("disapper");
-  }, 500);
+  // }, 500);
 });
 
 
@@ -75,7 +75,7 @@ const observer = new IntersectionObserver(entries=>{
     const ele =entry.target;
     if(entry.isIntersecting){
       ele.style.transition = '1.2s';
-      ele.style.animation = 'fadeup 1s ease';
+      // ele.style.animation = 'fadeup 1s ease';
       ele.style.transform = `translateY(0px)`;
       ele.style.opacity='1';
       observer.unobserve(entry.target)
