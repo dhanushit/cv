@@ -2,16 +2,16 @@
 
 let loader = document.querySelector(".loader");
 
-window.addEventListener("load", vanish);
+// window.addEventListener(, vanish);
 
-function vanish() {
+// function vanish() {
   
-  setTimeout(function() {
-    loader.classList.add("disapper");
-  }, 500);
-}
+//   setTimeout(function() {
+//     loader.classList.add("disapper");
+//   }, 500);
+// }
 
-document.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("load", function() {
   setTimeout(function() {
     loader.classList.add("disapper");
   }, 500);
