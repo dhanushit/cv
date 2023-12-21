@@ -2,19 +2,28 @@
 
 let loader = document.querySelector(".loader");
 
-// window.addEventListener(, vanish);
-
-// function vanish() {
-  
-//   setTimeout(function() {
-//     loader.classList.add("disapper");
-//   }, 500);
-// }
 
 window.addEventListener("load", function() {
-  // setTimeout(function() {
+  const cards = document.getElementsByClassName('animateup');
+const arr = Array.from(cards);
+const observer = new IntersectionObserver(entries=>{
+   entries.forEach(entry=>{
+    const ele =entry.target;
+    if(entry.isIntersecting){
+      ele.style.transition = '1.2s';
+      ele.style.transform = `translateY(0px)`;
+      ele.style.opacity='1';
+      ele.style.animation="fadeup 1s ease";
+      observer.unobserve(entry.target)
+    }
+   });
+});
+
+
+arr.forEach((card)=>{
+    observer.observe(card);
+});
     loader.classList.add("disapper");
-  // }, 500);
 });
 
 
@@ -68,30 +77,4 @@ window.addEventListener('scroll',()=>{
 });
 
 
-const cards = document.getElementsByClassName('animateup');
-const arr = Array.from(cards);
-const observer = new IntersectionObserver(entries=>{
-   entries.forEach(entry=>{
-    const ele =entry.target;
-    if(entry.isIntersecting){
-      ele.style.transition = '1.2s';
-      // ele.style.animation = 'fadeup 1s ease';
-      ele.style.transform = `translateY(0px)`;
-      ele.style.opacity='1';
-      observer.unobserve(entry.target)
-    }
-    
-    // else{
-    //   ele.style.animation = 'none';
-    //   ele.style.transform = `translateY(200px)`;
-    // }
-    
-    console.log(ele.style);
-    // console.log(entry.target.style.animation = 'fadeup 2s');
-   });
-});
 
-
-arr.forEach((card)=>{
-    observer.observe(card);
-});
