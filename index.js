@@ -13,7 +13,7 @@ const observer = new IntersectionObserver(entries=>{
       ele.style.transition = '1.2s';
       ele.style.transform = `translateY(0px)`;
       ele.style.opacity='1';
-      ele.style.animation="fadeup 1s ease";
+      ele.style.animation="fadeup 1s linear";
       observer.unobserve(entry.target)
     }
    });
