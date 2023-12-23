@@ -12,8 +12,10 @@ const observer = new IntersectionObserver(entries=>{
     if(entry.isIntersecting){
       ele.style.transition = '1.2s';
       ele.style.transform = `translateY(0px)`;
-      ele.style.opacity='1';
       ele.style.animation="fadeup 1s linear";
+        setTimeout(()=>{
+      ele.style.opacity='1';
+      },500);
       observer.unobserve(entry.target)
     }
    });
