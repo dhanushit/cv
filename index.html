@@ -3,19 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore the digital realm through the captivating portfolio of Dhanush Kumar K, a skilled Frontend Engineer passionate about creating innovative and dynamic web experiences. From personalized portfolios to interactive projects, discover a showcase of expertise in HTML, CSS, JavaScript, React, and more. Uncover the artistry of web development and connect with Dhanush for an immersive journey into the world of cutting-edge technologies. Your gateway to a visually stunning and functionally seamless online presence awaits"
+    />
+    <meta
+      name="keywords"
+      content="dhanush,dhanush kumar,dhanush youtube, dhanush developer, dhanush reverse engineering, Frontend Engineer,Dhanush Kumar K"
+    />
+    <link rel="canonical" href="https://dhanushit.github.io/cv/" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/media500.css" />
     <link rel="stylesheet" href="css/media900.css" />
-    <title>Dhanush-portfolio-v2</title>
-     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-     <script
-    type="module"
-    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-  ></script>
-  <script
-    nomodule
-    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-  ></script>
+
+    <title>Dhanush portfolio v2</title>
   </head>
 
   <body id="body">
@@ -40,15 +41,15 @@
 
       <div class="bottom-nav">
         <div class="bottom-nav-content-box">
-          <a onclick="slide()" href="#main">home</a>
+          <a onclick="slide(); scrollToEle('main')">home</a>
           <a onclick="slide()" href="Resume.pdf">resume</a>
-          <a onclick="slide()" href="#skills-wrapper">Skills</a>
-          <a onclick="slide()" href="#project-content">Projects</a>
-          <a onclick="slide()" href="#bottom-bar">Contact</a>
+          <a onclick="slide(); scrollToEle('skills-wrapper')">Skills</a>
+          <a onclick="slide(); scrollToEle('project-content')">Projects</a>
+          <a onclick="slide(); scrollToEle('bottom-bar')">Contact</a>
         </div>
       </div>
 
-      <a class="arrow" href="#main">
+      <a class="arrow" onclick="scrollToEle('main')">
         <ion-icon name="arrow-up-outline"></ion-icon>
       </a>
     </header>
@@ -79,9 +80,8 @@
           <a href="https://www.linkedin.com/in/dhanush-kumar-k-514471210/">
             <ion-icon name="logo-linkedin"></ion-icon
           ></a>
-          <a href="tel:+919902256120"
-            ><ion-icon name="logo-whatsapp"></ion-icon
-          ></a>
+          <a href="https://github.com/dhanushcodev" 
+            ><ion-icon name="logo-github"></ion-icon></a>
         </div>
       </div>
 
@@ -92,10 +92,7 @@
         </p>
 
         <div id="skills-wrapper">
-          <h1 class="animateup">
-            Skills I have
-            <span>🏷️</span>
-          </h1>
+          <h1 class="animateup">Skills I have</h1>
           <p class="animateup">Here are the skills.</p>
           <div class="skills">
             <div class="skill-left-card animateup">
@@ -217,55 +214,56 @@
         </div>
 
         <div id="project-content">
-          <h1 class="animateup">Project Works <span>💼</span></h1>
+          <h1 class="animateup">Project Works</h1>
           <p class="animateup">Here are my Frontend projects.</p>
+          <div class="project-card-container">
+            <div class="project-card animateup">
+              <div class="project-card-left">
+                <h3>Html, Css, Bootstrap, Javascript</h3>
+              </div>
+              <div class="project-card-middle">
+                <img src="assets/port1.png" alt="" />
+              </div>
+              <div class="project-card-right">
+                <h2>Personal Portfolio <br />version 1</h2>
+                <a
+                  class="view-projects"
+                  target="_blank"
+                  href="https://dhanushkumark.netlify.app/"
+                  >View website</a
+                >
+              </div>
+            </div>
 
-          <div class="project-card animateup" data-aos-once="true">
-            <div class="project-card-left">
-              <h3>Html, Css, Bootstrap, Javascript</h3>
+            <div class="project-card animateup">
+              <div class="project-card-left">
+                <h3>Html, Css, Javascript, jquery, aos</h3>
+              </div>
+              <div class="project-card-middle">
+                <img src="assets/port2.jpg" alt="" />
+              </div>
+              <div class="project-card-right">
+                <h2>Personal Portfolio <br />version 2</h2>
+                <a class="view-projects" href="#">View website</a>
+              </div>
             </div>
-            <div class="project-card-middle">
-              <img src="assets/port1.png" alt="" />
-            </div>
-            <div class="project-card-right">
-              <h2>Personal Portfolio <br />version 1</h2>
-              <a
-                class="view-projects"
-                target="_blank"
-                href="https://dhanushkumark.netlify.app/"
-                >View website</a
-              >
-            </div>
-          </div>
 
-          <div class="project-card animateup">
-            <div class="project-card-left">
-              <h3>Html, Css, Javascript, jquery, aos</h3>
-            </div>
-            <div class="project-card-middle">
-              <img src="assets/port2.jpg" alt="" />
-            </div>
-            <div class="project-card-right">
-              <h2>Personal Portfolio <br />version 2</h2>
-              <a class="view-projects" href="#">View website</a>
-            </div>
-          </div>
-
-          <div class="project-card animateup">
-            <div class="project-card-left">
-              <h3>Html, Css, Javascript</h3>
-            </div>
-            <div class="project-card-middle">
-              <img src="assets/cpen.png" alt="" />
-            </div>
-            <div class="project-card-right">
-              <h2>Online IDE <br />version 1</h2>
-              <a
-                class="view-projects"
-                target="_blank"
-                href="https://webcompiler-project.netlify.app"
-                >View website</a
-              >
+            <div class="project-card animateup">
+              <div class="project-card-left">
+                <h3>Html, Css, Javascript</h3>
+              </div>
+              <div class="project-card-middle">
+                <img src="assets/cpen.png" alt="" />
+              </div>
+              <div class="project-card-right">
+                <h2>Online IDE <br />version 1</h2>
+                <a
+                  class="view-projects"
+                  target="_blank"
+                  href="https://webcompiler-project.netlify.app"
+                  >View website</a
+                >
+              </div>
             </div>
           </div>
         </div>
@@ -283,8 +281,8 @@
                 <a href="mailto:kdhanush894@gmail.com">kdhanush894@gmail.com</a>
               </p>
             </div>
-            <div class="animateup small" >
-              <a  href="mailto:kdhanush894@gmail.com"
+            <div class="animateup small">
+              <a href="mailto:kdhanush894@gmail.com"
                 ><ion-icon name="mail-outline"></ion-icon
               ></a>
               <a href="https://www.instagram.com/k_dhanush_kumar/">
@@ -293,9 +291,8 @@
               <a href="https://www.linkedin.com/in/dhanush-kumar-k-514471210/">
                 <ion-icon name="logo-linkedin"></ion-icon
               ></a>
-              <a href="tel:+919902256120"
-                ><ion-icon name="logo-whatsapp"></ion-icon
-              ></a>
+              <a href="https://github.com/dhanushcodev"
+                ><ion-icon name="logo-github"></ion-icon></a>
             </div>
           </div>
         </div>
@@ -305,33 +302,15 @@
         <p>© DHANUSH KUMAR K</p>
       </div>
     </div>
-
-   
-   
-  <script src="index.js"></script>
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      $("a").on("click", function (event) {
-        if (this.hash !== "") {
-          event.preventDefault();
-          var hash = this.hash;
-          $("html, body").animate(
-            {
-              scrollTop: $(hash).offset().top,
-            },
-            2000,
-            function () {
-              window.location.hash = hash;
-            }
-          );
-        }
-      });
-    });
-  </script> -->
-
- 
-
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="index.js"></script>
   </body>
-  
 </html>

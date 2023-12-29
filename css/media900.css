@@ -57,9 +57,13 @@
 
   #projects > p {
     width: 90%;
-    padding: 9rem 0 0 10vw;
+    padding: 6rem 0 0 10vw;
     font-size: 0.9rem;
     color: #ffffffbe;
+  }
+
+  #project-content {
+    padding-top: 7rem;
   }
 
   #project-content h1 {
@@ -137,7 +141,7 @@
     grid-template-columns: 1fr;
     padding: 0;
     gap: 4rem;
-    margin: 3rem auto 0 auto;
+    margin: 3rem auto 1rem auto;
     text-transform: none;
     width: 70%;
   }

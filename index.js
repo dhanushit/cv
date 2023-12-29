@@ -1,33 +1,41 @@
-'use strict'
+"use strict";
 
 let loader = document.querySelector(".loader");
 
+function checkMediaQuery(query) {
+  return window.matchMedia(query).matches;
+}
 
-window.addEventListener("load", function() {
-  const cards = document.getElementsByClassName('animateup');
-const arr = Array.from(cards);
-const observer = new IntersectionObserver(entries=>{
-   entries.forEach(entry=>{
-    const ele =entry.target;
-    if(entry.isIntersecting){
-      ele.style.transition = '1.2s';
-      ele.style.transform = `translateY(0px)`;
-      ele.style.animation="fadeup 1s linear";
-        setTimeout(()=>{
-      ele.style.opacity='1';
-      },500);
-      observer.unobserve(entry.target)
-    }
-   });
+document.addEventListener("DOMContentLoaded", function () {
+  animate();
 });
 
+if (checkMediaQuery("(max-width: 900px)")) {
+  var project_container = document.querySelector(".project-card-container");
+  project_container.classList.add("animateup");
+  var projcards = document.querySelectorAll("project-card");
+  for (var i = 0; i < projcards.length; i++) {
+    projcards[i].classList.remove("animateup");
+  }
+}
 
-arr.forEach((card)=>{
+function animate() {
+  const cards = document.getElementsByClassName("animateup");
+  const arr = Array.from(cards);
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const ele = entry.target;
+      if (entry.isIntersecting) {
+        ele.classList.add("animate-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  });
+
+  arr.forEach((card) => {
     observer.observe(card);
-});
-    loader.classList.add("disapper");
-});
-
+  });
+}
 
 var typed = new Typed(".text-animation", {
   strings: ["Web Developer", "App Developer"],
@@ -36,9 +44,6 @@ var typed = new Typed(".text-animation", {
   backDelay: 1000,
   loop: true,
 });
-
-
-
 
 var curs = document.getElementById("cursor");
 
@@ -69,14 +74,34 @@ function slide() {
   bottomnavcontent.classList.toggle("bottom-nav-visible");
 }
 
-window.addEventListener('scroll',()=>{
-    var scrollTop = document.querySelector('.arrow');
-    if(window.scrollY > 800){
-      scrollTop.style.opacity = '1';
-    }else{
-      scrollTop.style.opacity = '0';
-    }
+function scrollToEle(ele) {
+  const element = document.getElementById(ele);
+  element.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+    inline: "start",
+  });
+}
+
+window.addEventListener("scroll", () => {
+  var scrollTop = document.querySelector(".arrow");
+  if (window.scrollY > 800) {
+    scrollTop.style.opacity = "1";
+  } else {
+    scrollTop.style.opacity = "0";
+  }
 });
 
+window.addEventListener("load", function () {
+  loader.classList.add("disappear");
+});
 
+document.addEventListener("keydown", function (event) {
+  if (event.ctrlKey && (event.key === "i" || event.key === "I")) {
+    event.preventDefault();
+  }
+});
 
+document.addEventListener("contextmenu", function (event) {
+  event.preventDefault();
+});
