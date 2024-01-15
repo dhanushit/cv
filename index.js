@@ -11,10 +11,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 if (checkMediaQuery("(max-width: 900px)")) {
-  var project_container = document.querySelector(".project-card-container");
+  let project_container = document.querySelector(".project-card-container");
   project_container.classList.add("animateup");
-  var projcards = document.querySelectorAll("project-card");
-  for (var i = 0; i < projcards.length; i++) {
+  let projcards = document.querySelectorAll("project-card");
+  for (let i = 0; i < projcards.length; i++) {
     projcards[i].classList.remove("animateup");
   }
 }
@@ -37,25 +37,19 @@ function animate() {
   });
 }
 
-var typed = new Typed(".text-animation", {
-  strings: ["Web Developer", "App Developer"],
-  typeSpeed: 40,
-  backSpeed: 40,
-  backDelay: 1000,
-  loop: true,
-});
 
-var curs = document.getElementById("cursor");
+
+let curs = document.getElementById("cursor");
 
 document.addEventListener("mousemove", function (event) {
   curs.style.left = event.x + 20 + "px";
   curs.style.top = event.y + 20 + "px";
 });
 
-var bottomnav = document.querySelector(".bottom-nav");
-var menu = document.querySelector(".menu");
-var close = document.querySelector(".close");
-var bottomnavcontent = document.querySelector(".bottom-nav-content-box");
+let bottomnav = document.querySelector(".bottom-nav");
+let menu = document.querySelector(".menu");
+let close = document.querySelector(".close");
+let bottomnavcontent = document.querySelector(".bottom-nav-content-box");
 
 function slide() {
   if (bottomnav.classList.contains("visible")) {
@@ -84,12 +78,20 @@ function scrollToEle(ele) {
 }
 
 window.addEventListener("scroll", () => {
-  var scrollTop = document.querySelector(".arrow");
+  let scrollTop = document.querySelector(".arrow");
   if (window.scrollY > 800) {
     scrollTop.style.opacity = "1";
   } else {
     scrollTop.style.opacity = "0";
   }
+});
+
+let typed = new Typed(".text-animation", {
+  strings: ["Web Developer", "App Developer"],
+  typeSpeed: 40,
+  backSpeed: 40,
+  backDelay: 1000,
+  loop: true,
 });
 
 window.addEventListener("load", function () {
